@@ -8,23 +8,11 @@ import (
 
 func main() {
 
-
-	// x, y, o := parsing()
-	// res := calculating(x, y, o)
-
-	// res := calculating(parsing())
-
 	x := getOperand("Input left operand")
 	o := getOperation()
 	y := getOperand("Input right operand")	
 
 	res, err := calculating(x, y, o)
-
-	// if err == 3 {
-	// 	fmt.Println("divison by zero")
-	// } else {
-	// 	fmt.Printf("Result = %.3f\n", res)
-	// }
 
 	switch err {
 	case 3:
@@ -32,8 +20,6 @@ func main() {
 	case 0:
 		fmt.Printf("Result = %.3f\n", res)
 	}
-
-
 }
 
 func getOperand(s string) float64 {
